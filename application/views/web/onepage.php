@@ -21,30 +21,70 @@
         </div>
         <div class="row">
 
+
+            <div class="col s12 m4">
+                <div class="row">
+                    <div class="col s12 m12">
+                        <div class="card">
+                            <div class="card-image">
+                                <div class="slider">
+                                    <ul class="slides">
+                                        <li>
+                                            <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                                            <div class="caption center-align">
+                                                <h3>This is our big Tagline!</h3>
+                                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                                            <div class="caption left-align">
+                                                <h3>Left Aligned Caption</h3>
+                                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p class="center">CONTENTS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
         </div>
     </div>
 
     <!--Association-->
     <div class="row">
-        
+
         <h1>Association</h1>
         <div class="association">
             <div class="col s12 m3">
                 <img class="materialboxed" width="200" src="http://lorempixel.com/580/250/nature/4">
             </div>
-            
+
             <div class="col s12 m3">
                 <img class="materialboxed" width="200" src="http://lorempixel.com/580/250/nature/4">
             </div>
-            
+
             <div class="col s12 m3">
                 <img class="materialboxed" width="200" src="http://lorempixel.com/580/250/nature/4">
             </div>
-            
+
             <div class="col s12 m3">
                 <img class="materialboxed" width="200" src="http://lorempixel.com/580/250/nature/4">
             </div>
-            
+
         </div>
     </div>
 
@@ -52,110 +92,110 @@
     <div class="row">
 
         <h1>Lots</h1>
-            <div class="col s12 m4">
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-                            <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
-                            <div class="caption left-align">
-                                <h3>Left Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
-                            <div class="caption right-align">
-                                <h3>Right Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
-                            <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-             <div class="col s12 m4">
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-                            <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
-                            <div class="caption left-align">
-                                <h3>Left Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
-                            <div class="caption right-align">
-                                <h3>Right Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
-                            <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-             <div class="col s12 m4">
-                <div class="slider">
-                    <ul class="slides">
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-                            <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
-                            <div class="caption left-align">
-                                <h3>Left Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
-                            <div class="caption right-align">
-                                <h3>Right Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
-                            <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        <div class="col s12 m4">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>This is our big Tagline!</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                        <div class="caption left-align">
+                            <h3>Left Aligned Caption</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+                        <div class="caption right-align">
+                            <h3>Right Aligned Caption</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>This is our big Tagline!</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    
+        <div class="col s12 m4">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>This is our big Tagline!</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                        <div class="caption left-align">
+                            <h3>Left Aligned Caption</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+                        <div class="caption right-align">
+                            <h3>Right Aligned Caption</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>This is our big Tagline!</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>This is our big Tagline!</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+                        <div class="caption left-align">
+                            <h3>Left Aligned Caption</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+                        <div class="caption right-align">
+                            <h3>Right Aligned Caption</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>This is our big Tagline!</h3>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 
     <!--Bouton et footer-->
     <div class="row">
