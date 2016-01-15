@@ -11,6 +11,7 @@ and open the template in the editor.
         <title>Prenuit</title>
         <link rel="stylesheet" href="<?php echo (Materialize . 'css/materialize.min.css'); ?>">
         <link rel="stylesheet" href="<?php echo (Materialize . 'css/materialize.icons.css'); ?>">
+        <link rel="stylesheet" href="<?php echo (CSS . 'css/style.css'); ?>">
     </head>
     <body>
         <!-- Le fichier Template a pour caractéristique d'être le point de passage
@@ -32,7 +33,7 @@ and open the template in the editor.
 
         <!--Pied de page-->
             <footer>
-              Nuit 2016
+              Footer Nuit 2016
             </footer>
         <!--Fin de pied de page-->
 
