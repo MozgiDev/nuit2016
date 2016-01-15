@@ -32,7 +32,7 @@ and open the template in the editor.
 
         <!--Pied de page-->
             <footer>
-              Footer megaa neger !! test test
+              Nuit 2016
             </footer>
         <!--Fin de pied de page-->
 
