@@ -44,7 +44,7 @@ class Joueur extends CI_Controller {
 		$data = [];
 		$data['title'] = 'Liste des joueurs';
 		$data['joueurs'] = $this->joueurManager->all();
-		$this->template->load('layouts/admin', 'atelier/ajouter', $data);
+		$this->template->load('layouts/admin', 'joueur/ajouter', $data);
 	}
 
 	public function supprimer($id)
