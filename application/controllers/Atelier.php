@@ -31,7 +31,7 @@ class Atelier extends CI_Controller {
 		$data = [];
 		$data['title'] = 'List des ateliers';
 		$data['ateliers'] = $this->ateliersManager->all();
-		$this->template->load('layouts/admin', 'atelier/ajouter', $data);
+		$this->template->load('layouts/admin', 'atelier/lister', $data);
 	}
 
 	//public
@@ -40,11 +40,20 @@ class Atelier extends CI_Controller {
 		$data = [];
 		$data['title'] = 'List des ateliers';
 		$data['ateliers'] = $this->ateliersManager->all();
-		$this->template->load('layouts/admin', 'atelier/ajouter', $data);
+		$this->template->load('layouts/admin', 'atelier/ateliers', $data);
 	}
 
-	public function supprimer()
+	public function supprimer($id)
 	{
-		$this->atelierManager->
+		if($this->atelierManager->delete($id))
+		{
+			redirect('atelier/lister');
+		}
+	}
+
+	public function filtreAtelier($id)
+	{
+		$atelier = $this->atelierManager->find($id);
+		$this->template->load('layouts/admin', 'atelier/lister');
 	}
 }
