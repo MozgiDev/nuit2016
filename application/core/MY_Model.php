@@ -6,8 +6,6 @@ class MY_Model extends CI_Model {
 		if(! empty($data))
 		{
 			return (bool) $this->db->set($data)
-						 ->set(['created_at' => 'NOW()'],null, FALSE)
-						 ->set(['updated_at' => 'NOW()'],null,  FALSE)
 						 ->insert($this->table);
 		}
 		return false;
@@ -39,7 +37,6 @@ class MY_Model extends CI_Model {
 	{
 
 			return (bool) $this->db->set($data)
-								   ->set(['modified_at' => 'NOW()'])
 								   ->where(['id' => $where])
 								   ->update($this->table);
 	}
