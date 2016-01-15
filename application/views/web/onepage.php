@@ -10,6 +10,7 @@
 <div class="container">
     <!--Presentation-->
     <div class="row">
+        <h1>Presentation</h1>
         <div class="row">
             <div class="col s12 m6 l6">
                 <p>Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem suiSed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem s.</p>
@@ -20,6 +21,37 @@
         </div>
         <div class="row">
 
+        </div>
+    </div>
+
+    <!--Association-->
+    <div class="row">
+        
+        <h1>Association</h1>
+        <div class="association">
+            <div class="col s12 m3">
+                <img class="materialboxed" width="200" src="http://lorempixel.com/580/250/nature/4">
+            </div>
+            
+            <div class="col s12 m3">
+                <img class="materialboxed" width="200" src="http://lorempixel.com/580/250/nature/4">
+            </div>
+            
+            <div class="col s12 m3">
+                <img class="materialboxed" width="200" src="http://lorempixel.com/580/250/nature/4">
+            </div>
+            
+            <div class="col s12 m3">
+                <img class="materialboxed" width="200" src="http://lorempixel.com/580/250/nature/4">
+            </div>
+            
+        </div>
+    </div>
+
+    <!--Lots-->
+    <div class="row">
+
+        <h1>Lots</h1>
             <div class="col s12 m4">
                 <div class="slider">
                     <ul class="slides">
@@ -123,19 +155,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!--Association-->
-    <div class="row">
-        <div class="association">
-            
-        </div>
-    </div>
-
-    <!--Lots-->
-    <div class="row">
-
-    </div>
+    
 
     <!--Bouton et footer-->
     <div class="row">

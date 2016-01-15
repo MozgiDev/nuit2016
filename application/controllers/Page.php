@@ -20,7 +20,7 @@ class Page extends CI_Controller {
 	 */
 	public function index()
 	{
-            $this->template->load('template','web/onepage');
+            $this->template->load('layouts/template','web/onepage');
 	}
         
         
