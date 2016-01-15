@@ -50,4 +50,10 @@ class Atelier extends CI_Controller {
 			redirect('atelier/lister');
 		}
 	}
+
+	public function filtreAtelier($id)
+	{
+		$atelier = $this->atelierManager->find($id);
+		$this->template->load('layouts/admin', 'atelier/lister');
+	}
 }
