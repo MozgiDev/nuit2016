@@ -32,14 +32,19 @@ and open the template in the editor.
 
 
         <!--Pied de page-->
-            <footer>
-              Footer Nuit 2016
-            </footer>
+        <footer>
+            Footer Nuit 2016
+        </footer>
         <!--Fin de pied de page-->
 
         <!--Appelles des feuilles JS-->
         <script src="<?php echo (Jquery); ?>"></script>
         <script src="<?php echo (Materialize . 'js/materialize.min.js'); ?>"></script>
+        <script>
+            $(document).ready(function () {
+                $('.slider').slider({full_width: true});
+            });
+        </script>
         <!--Fin d'appelles des feuilles JS-->
     </body>
 </html>
