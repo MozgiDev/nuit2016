@@ -18,6 +18,7 @@ class Association extends CI_Controller
 
     public function store()
     {
+
         $monAssociation['libelleAssociation'] = $this->input->post('libelleAssociation');
         $monAssociation['urlPhotoAssociation']= //A GERER
         $monAssociation['urlSiteAssociation']= $this->input->post('urlSiteAssociation');
