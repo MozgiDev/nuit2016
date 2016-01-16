@@ -37,6 +37,9 @@ class Admin extends CI_Controller
         return $this->lot_Model->all('idLot');
     }
 
+  public function indexAteliers() {
+     $this->template->load('layouts/admin', 'ateliers/index');
+  }
     //IMAGE
     public function showImage()
     {
