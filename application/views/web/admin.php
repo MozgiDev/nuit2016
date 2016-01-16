@@ -63,6 +63,7 @@
 
     <div class="col s6">
         <h3>Logo principal</h3>
+        <img src="<?php echo IMG . $logo->urlLogo?>">
         <i>
         </i>
         <p>
@@ -171,8 +172,17 @@
             </thead>
 
             <tbody>
-            <tr>
-            </tr>
+            
+                <?php 
+                foreach ($lots as $row){
+                    echo '<tr>';
+                    echo '<td>'.$row->urlLot.'</td>';
+                    echo '<td>'.$row->positionLot.'</td>';
+                    echo'</tr>';
+                }
+                   
+                ?>              
+            
             </tbody>
         </table>
 
