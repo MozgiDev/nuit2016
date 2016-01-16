@@ -27,6 +27,7 @@
         <div class="col s12 m4"></div>
     </div>
 </nav>
+
 <nav style="height: 150px;box-shadow:none">
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo center"><img style="margin-top: 20px;" src="<?php echo (IMG . $image[0]->urlIMAGE) ?>"></a>
