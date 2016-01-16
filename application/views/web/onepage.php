@@ -6,7 +6,7 @@
 
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center"><img src="<?php echo (IMG . $logo) ?>"></a>
+        <a href="#!" class="brand-logo center"><img src="<?php echo (IMG . $logo[0]->libelleLogo) ?>"></a>
     </div>
 </nav>
 
@@ -186,7 +186,7 @@ foreach ($lots as $row) {
 
                 <div class="row">
                     <div class="row">
-                        <img src="<?php echo (IMG . $logo) ?>">
+                        <img src="<?php echo (IMG . $logo[0]->libelleLogo) ?>">
                     </div>
                     <div class="row">
                         <div class="nav-wrapper">

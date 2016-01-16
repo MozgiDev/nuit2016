@@ -10,8 +10,10 @@ class Admin extends CI_Controller
     }
     public function index()
     {
-
         $data['contenue'] = $this->indexContenue();
+        
+        var_dump($data);
+        
         $this->template->load('layouts/admin', 'lots/index',$data);
     }
 
