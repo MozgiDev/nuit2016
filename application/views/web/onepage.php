@@ -6,7 +6,7 @@
 
 <nav>
     <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">LOGO</a>
+        <a href="#!" class="brand-logo center"><img src="<?php echo (IMG . $logo[0]->libelleLogo) ?>"></a>
     </div>
 </nav>
 
@@ -61,30 +61,27 @@
                     if ($row->afficherAlbum == 1) {
 
                         echo '<div class = "col s12 m4">';
-                            echo '<div class = "card">';
-                                echo '<div class = "card-image">';
-                                    echo '<div class = "slider">';
-                                        echo '<ul class = "slides">';
-                                            // on boucle sur les images liée a l'album
+                        echo '<div class = "card">';
+                        echo '<div class = "card-image">';
+                        echo '<div class = "slider">';
+                        echo '<ul class = "slides">';
+                        // on boucle sur les images liée a l'album
 
-                                            foreach ($photos as $rowP){
-                                                if($rowP->idAlbum == $row->idAlbum){
-                                                    echo '<li>';
-                                                        echo '<img src = "'. IMG . $rowP->urlPhoto .'">';
-                                                    echo '</li>';
-                                                }
-                                               
-                                            }
-                                        echo '</ul>';
-                                    echo '</div>';
-                                echo '</div>';
-                                echo '<div class = "card-content">';
-                                    echo '<p class = "center">'.$row->libelleAlbum.'</p>';
-                                echo '</div>';
-                            echo '</div>';
+                        foreach ($photos as $rowP) {
+                            if ($rowP->idAlbum == $row->idAlbum) {
+                                echo '<li>';
+                                echo '<img src = "' . IMG . $rowP->urlPhoto . '">';
+                                echo '</li>';
+                            }
+                        }
+                        echo '</ul>';
                         echo '</div>';
-
-                       
+                        echo '</div>';
+                        echo '<div class = "card-content">';
+                        echo '<p class = "center">' . $row->libelleAlbum . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
                     }
                 }
                 ?>
@@ -106,17 +103,16 @@
 
         <h1 class="center">Association</h1>
         <div class="association">
-            <?php 
-                foreach ($association as $row){
-                    if($row->afficherAssociation == 1){
-                        echo '<div class="col s12 m3">';
-                            echo '<img class="materialboxed imgRonde" width="200" src="'.IMG . $row->urlPhotoAssociation .'">';
-                        echo '</div>';
-                    }
-                    
-                }
-            ?>
-            
+<?php
+foreach ($association as $row) {
+    if ($row->afficherAssociation == 1) {
+        echo '<div class="col s12 m3">';
+        echo '<img class="materialboxed imgRonde" width="200" src="' . IMG . $row->urlPhotoAssociation . '">';
+        echo '</div>';
+    }
+}
+?>
+
 
 
         </div>
@@ -126,32 +122,31 @@
     <div class="row" id="lots">
 
         <h1 class="center">Lots</h1>
-        
-        
-        <?php 
-            $i = 0;
-                    foreach ($lots as $row){
-                        $i = $i + 1;
-                        echo '<div class="col s12 m4">';
-                            echo '<div class="row">';
-                                echo '<div class="col s12 m7">';
-                                    echo '<div class="card">';
-                                        echo '<div class="card-image">';
-                                            echo '<img src="'.$row->urlLot.'">';
-                                        echo '</div>';
-                                        echo '<div class="card-content">';
-                                            echo '<p class="center">'. $i .'er n-'. $i .'</p>';
-                                        echo '</div>';
-                                    echo '</div>';
-                                echo '</div>';
-                            echo '</div>';
-                        echo '</div>';
-                    }
-        
-        ?>
-        
-        
-        
+
+
+<?php
+$i = 0;
+foreach ($lots as $row) {
+    $i = $i + 1;
+    echo '<div class="col s12 m4">';
+    echo '<div class="row">';
+    echo '<div class="col s12 m7">';
+    echo '<div class="card">';
+    echo '<div class="card-image">';
+    echo '<img src="' . $row->urlLot . '">';
+    echo '</div>';
+    echo '<div class="card-content">';
+    echo '<p class="center">' . $i . 'er n-' . $i . '</p>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+}
+?>
+
+
+
     </div>
 
 
@@ -165,7 +160,7 @@
             </div>
             <div class="row">
                 <div class="col s12 l12 m12 center">
-                    <a class="waves-effect waves-light btn btninscript">Adresse mail</a>
+                     <input id="email" type="email" class="validate">
                 </div>
             </div>
             <div class="row">
@@ -190,17 +185,20 @@
                 </div>
 
                 <div class="row">
-
-                    <div class="nav-wrapper">
-                        <div class="col s12 m4"></div>
-                        <div class="col s12 m4">
-
-                            // des lien ici
-
-                        </div>
-                        <div class="col s12 m4"></div>
+                    <div class="row">
+                        <img src="<?php echo (IMG . $logo[0]->libelleLogo) ?>">
                     </div>
+                    <div class="row">
+                        <div class="nav-wrapper">
+                            <div class="col s12 m4"></div>
+                            <div class="col s12 m4">
 
+                                // des lien ici
+
+                            </div>
+                            <div class="col s12 m4"></div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
