@@ -31,13 +31,6 @@ and open the template in the editor.
         <!-- Fin du contenue des pages dans la variables $contents -->
 
 
-
-        <!--Pied de page-->
-        <footer>
-            Footer Nuit 2016
-        </footer>
-        <!--Fin de pied de page-->
-
         <!--Appelles des feuilles JS-->
         <script src="<?php echo (Jquery); ?>"></script>
         <script src="<?php echo (Materialize . 'js/materialize.min.js'); ?>"></script>
