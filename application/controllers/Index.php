@@ -16,8 +16,11 @@ class Index extends CI_Controller {
 
         $data['association'] = $this->indexAssociation();
         $data['logo'] = $this->indexLogo();
+<<<<<<< HEAD
+=======
         $data['image'] = $this->indexImage();
         
+>>>>>>> 5610d69367d7d49cedef1e561ed3f11230f21470
         $this->template->load('layouts/template', 'web/onepage', $data);
     }
 
