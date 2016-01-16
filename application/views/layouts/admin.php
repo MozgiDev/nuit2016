@@ -56,10 +56,13 @@ and open the template in the editor.
         <!--Appelles des feuilles JS-->
         <script src="<?php echo (Jquery); ?>"></script>
         <script src="<?php echo (Materialize . 'js/materialize.min.js'); ?>"></script>
-        <script type="text/javascript" src="assets/ckeditor.js"></script>
+        <script type="text/javascript" src="<?php echo (ASSETS . 'ckeditor/ckeditor.js'); ?>"></script>
         <script>
             $(document).ready(function () {
                 $('.slider').slider({full_width: true});
+                
+                CKEDITOR.replace( 'editor1' );
+
             });
         </script>
         <!--Fin d'appelles des feuilles JS-->
