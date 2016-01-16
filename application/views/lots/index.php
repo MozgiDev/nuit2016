@@ -6,18 +6,19 @@
 </nav>
 
 <div class="row">
-      <div class="col s10">
+      <div class="col s6">
 				<h3>Titre présentation</h3>
-			</div>
+				<form>
+					<textarea id="editor1" name="editor1"></textarea>
+				</br>
+					<button class="btn waves-effect waves-light" type="submit" name="action">
+							Valider action
+					</button>
 
-			<div class="col s2">
-				<button class="btn waves-effect waves-light" type="submit" name="action">
-					Valider action
-				</button>
-
-				<button class="btn waves-effect waves-light" type="submit" name="action">
-					Annuler saisie
-				</button>
+					<button class="btn waves-effect waves-light" type="submit" name="action">
+							Annuler saisie
+					</button>
+        </form>
 			</div>
 
 </div>
@@ -38,9 +39,33 @@
       		<input type="checkbox" id="afficherPres" />
       		<label for="afficherPres">Afficher</label>
     		</p>
+				<button class="btn waves-effect waves-light" type="submit" name="action">
+						Valider
+				</button>
+
+				<button class="btn waves-effect waves-light" type="submit" name="action">
+						Annuler
+				</button>
 			</div>
+
+
       <div class="col s6">
 				<h3>Logo principal</h3>
+				<i>
+				</i>
+				<p>
+      		<input type="checkbox" id="afficherPres" />
+      		<label for="afficherPres">Afficher</label>
+    		</p>
+
+				<button class="btn waves-effect waves-light" type="submit" name="action">
+						Valider
+				</button>
+
+				<button class="btn waves-effect waves-light" type="submit" name="action">
+						Annuler
+				</button>
+
 			</div>
 </div>
 
@@ -63,6 +88,17 @@
 					</tr>
 				</tbody>
 			</table>
+
+		</br>
+
+			<button class="btn waves-effect waves-light" type="submit" name="action">
+					Valider action
+			</button>
+
+			<button class="btn waves-effect waves-light" type="submit" name="action">
+					Annuler saisie
+			</button>
+
 		</div>
 
       <div class="col s6">
@@ -82,6 +118,16 @@
           </tr>
         </tbody>
       </table>
+		</br>
+
+			<button class="btn waves-effect waves-light" type="submit" name="action">
+					Valider action
+			</button>
+
+			<button class="btn waves-effect waves-light" type="submit" name="action">
+					Annuler saisie
+			</button>
+
 			</div>
 
 </div>
@@ -103,5 +149,16 @@
           </tr>
         </tbody>
       </table>
+
+		</br>
+
+			<button class="btn waves-effect waves-light" type="submit" name="action">
+					Valider action
+			</button>
+
+			<button class="btn waves-effect waves-light" type="submit" name="action">
+					Annuler saisie
+			</button>
+
 			</div>
 </div>
