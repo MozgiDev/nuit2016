@@ -58,8 +58,15 @@ class Joueur extends CI_Controller {
 
 	public function export()
 	{
+		// chargement du helper CSV
+		$this->load->helper('csv');
 		$query = $this->db->query("SELECT pseudo FROM joueur");
 
-		echo $this->dbutil->csv_from_result($query);
+		query_to_csv($query, TRUE, 'mon_fichier.'.time().'csv');
+	}
+
+	public function import()
+	{
+				
 	}
 }
