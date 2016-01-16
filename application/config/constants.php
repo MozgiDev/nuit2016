@@ -5,6 +5,7 @@ define('URL','http://127.0.0.1/nuit2016/');
 define('Materialize', URL.'assets/materialize/');
 define('CSS', URL.'assets/');
 define('Jquery', URL.'assets/jquery/jquery-2.2.0.min.js');
+define('IMG', URL.'assets/img/');
 
 /*
 |--------------------------------------------------------------------------

@@ -2,21 +2,7 @@
 
 // Header trop styler
 
-.header{
-    background-color: grey;
-    width: 100%;
-    height: 10%;
-}
 
-.petiteBarriere{
-    background-color: green;
-    width: 100%;
-    height: 2%;
-}
-
-.textHeader{
-    text-align: center;
-}
 
 p{
     text-align: justify;
@@ -24,4 +10,9 @@ p{
 
 .btninscript{
     width: 25%;
+}
+.imgRonde{
+    -webkit-border-radius:110px;
+    -moz-border-radius:110px;
+    border-radius:110px;
 }
