@@ -33,5 +33,8 @@
         }
         ?>
     </tbody>
+    <button acti></button>
+    <a href='<?=site_url();?>/joueur/export'><button class='btn waves-effect waves-light' type="button">Exporter</button></a>
+ 
 </table>
 </div>
