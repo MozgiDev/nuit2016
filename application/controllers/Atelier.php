@@ -30,8 +30,8 @@ class Atelier extends CI_Controller {
 	{
 		$data = [];
 		$data['title'] = 'List des ateliers';
-		$data['ateliers'] = $this->ateliersManager->all();
-		$this->template->load('layouts/admin', 'atelier/lister', $data);
+		$data['ateliers'] = $this->atelierManager->all('idatelier');
+		$this->template->load('layouts/admin', 'ateliers/index', $data);
 	}
 
 	//public

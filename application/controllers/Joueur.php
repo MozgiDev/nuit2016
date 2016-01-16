@@ -33,7 +33,7 @@ class Joueur extends CI_Controller {
         $data = [];
         $data['title'] = 'Liste des joueurs';
         $data['joueurs'] = $this->joueurManager->all('idJoueur');
-        //$this->template->load('layouts/admin', 'joueur/ajouter', $data);
+        $this->template->load('layouts/admin', 'joueurs/index', $data);
     }
 
     //public
@@ -132,6 +132,11 @@ private function generateRandomString($length = 5) {
 			redirect('/', 'refresh');
 		}
 	}
+
+	public function preinscription($id)
+	{
+		$data['joueur'] = $this->joueurManager->find($id, 'idJoueur');
+		}
 
 	public function classement()
 	{
