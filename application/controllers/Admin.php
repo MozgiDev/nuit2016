@@ -15,7 +15,7 @@ class Admin extends CI_Controller
         
         
         
-        $this->template->load('layouts/admin', 'lots/index',$data);
+        $this->template->load('layouts/admin', 'web/admin',$data);
     }
 
     //IMAGE
