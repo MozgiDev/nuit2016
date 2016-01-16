@@ -13,9 +13,7 @@ class Index extends CI_Controller {
         $data['photos'] = $this->indexPhoto();
         $data['lots'] = $this->indexLot();
         $data['album'] = $this->indexAlbum();
-        $data['association'] = $this->indexAssociation();
-        
-        
+
         $this->template->load('layouts/template', 'web/onepage', $data);
     }
 

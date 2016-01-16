@@ -45,7 +45,7 @@ class Atelier extends CI_Controller {
 
 	public function supprimer($id)
 	{
-		if($this->atelierManager->delete($id))
+		if($this->atelierManager->delete($id, 'idAtelier'))
 		{
 			redirect('atelier/lister');
 		}
@@ -53,7 +53,7 @@ class Atelier extends CI_Controller {
 
 	public function filtreAtelier($id)
 	{
-		$atelier = $this->atelierManager->find($id);
+		$atelier = $this->atelierManager->find($id, 'idAtelier');
 		$this->template->load('layouts/admin', 'atelier/lister');
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-define('URL','http://127.0.0.1/nuit2016/');
+define('URL','http://localhost/nuit2016/');
 define('Materialize', URL.'assets/materialize/');
 define('CSS', URL.'assets/');
 define('ASSETS', URL.'assets/');
