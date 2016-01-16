@@ -12,7 +12,8 @@ class Index extends CI_Controller {
         $data['contenu'] = $this->indexContenue();
         $data['photos'] = $this->indexPhoto();
         $data['lots'] = $this->indexLot();
-        // PAS FINIT $data['album'] = ;
+        $data['album'] = $this->indexAlbum();
+        
         var_dump($data);
         $this->template->load('layouts/template', 'web/onepage', $data);
     }
@@ -29,4 +30,8 @@ class Index extends CI_Controller {
         return $this->contenu_Model->find(1, 'idContenu');
     }
 
+    public function indexAlbum() {
+        return $this->album_Model->all("idAlbum");
+    }
+    
 }

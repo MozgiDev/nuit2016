@@ -22,7 +22,7 @@
                 <li><a href="#association">Association</a></li>
                 <li><a href="#lots">Lots</a></li>
             </ul>
-            
+
         </div>
         <div class="col s12 m4"></div>
     </div>
@@ -40,11 +40,11 @@
         <h1 class="center">Presentation</h1>
         <div class="row">
             <div class="col s12 m6 l6">
-                
-                
-                
-                
-                
+
+
+
+
+
                 <p>Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem suiSed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem s.</p>
             </div>
             <div class="col s12 m6 l6">
@@ -54,27 +54,39 @@
         <div class="row">
 
             <div class="slider-album">
+                <?php
+                // BOucle sur l'album
+                foreach ($album as $row) {
+
+                    if ($row->afficherAlbum == 1) {
+
+                        echo '<div class = "col s12 m4">';
+                            echo '<div class = "card">';
+                                echo '<div class = "card-image">';
+                                    echo '<div class = "slider">';
+                                        echo '<ul class = "slides">';
+                                            // on boucle sur les images liée a l'album
+
+                                            foreach ($photos as $rowP){
+                                                echo '<li>';
+                                                    echo '<img src = "'.IMG + $rowP->urlPhoto .'">';
+                                                echo '</li>';
+                                            }
+                                        echo '</ul>';
+                                    echo '</div>';
+                                echo '</div>';
+                                echo '<div class = "card-content">';
+                                    echo '<p class = "center">'.$row->libelleAlbum.'</p>';
+                                echo '</div>';
+                            echo '</div>';
+                        echo '</div>';
+
+                       
+                    }
+                }
+                ?>
 
 
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="<?php echo (IMG . "1.jpg"); ?>">
-                                    </li>
-                                    <li>
-                                        <img src="<?php echo (IMG . "2.jpg"); ?>"> 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <p class="center">CONTENTS</p>
-                        </div>
-                    </div>
-                </div>
 
 
                 <div class="col s12 m4">
@@ -264,9 +276,9 @@
                     <div class="nav-wrapper">
                         <div class="col s12 m4"></div>
                         <div class="col s12 m4">
-                          
+
                             // des lien ici
-                            
+
                         </div>
                         <div class="col s12 m4"></div>
                     </div>
