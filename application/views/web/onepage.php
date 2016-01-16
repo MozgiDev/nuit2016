@@ -177,7 +177,7 @@
 <div id="modal_inscription" class="modal">
     <div class="modal-content">
         <h4>Token:</h4>
-        <p id="token">  <div class="preloader-wrapper big active">
+        <div id="token">  <div class="preloader-wrapper big active">
             <div class="spinner-layer spinner-blue-only">
                 <div class="circle-clipper left">
                     <div class="circle"></div>
@@ -187,7 +187,7 @@
                     <div class="circle"></div>
                 </div>
             </div>
-        </div></p>
+        </div></div>
     </div>
     <div class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK</a>

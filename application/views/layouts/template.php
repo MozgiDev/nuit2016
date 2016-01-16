@@ -49,6 +49,15 @@ and open the template in the editor.
                 $('.slider').slider({full_width: true});
             });
         </script>
+
+        <script type="text/javascript">
+            
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+            
+        </script>
+
             <script>
         function inscription() {
             pseudo = $('#pseudo').val();
@@ -59,7 +68,7 @@ and open the template in the editor.
             $.ajax({
                 url: "http://localhost/nuit2016/index.php/joueur/inscription",
                 type: "POST",
-                data: 'pseudo=moi&mail=mlkj@mail.com',
+                data: 'pseudo='+pseudo+'&mail='+mail,
                 success: function (html) {
                     console.log(html);
                     $('#token').html(html);
