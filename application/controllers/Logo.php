@@ -1,21 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Image extends CI_Controller
+class Logo extends CI_Controller
 {
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('image_Model', 'imageManager');
-
     }
 
-    public function show()
+    public function showLogo()
     {
-        return $this->image_Model->find(1);
+        return $this->logo_Model->find(1);
     }
 
-    public function update()
+    public function updateLogo()
     {
         //configuration de la librairie d'upload
         $config['upload_path'] = './assets/images/uploaded';
@@ -25,14 +23,14 @@ class Image extends CI_Controller
         //on charge la librairie ensuite
         $this->load->library('upload');
         $this->upload->initialize($config);
-        if (!$this->upload->do_upload("uneImage")) {
+        if (!$this->upload->do_upload("unLogo")) {
             $error = array('error' => $this->upload->display_errors());
             return false;
         }
 
         //stockage dans la BD
-        $monImage["urlImage"] = $this->upload->data('full_path');
-        if (!$this->image_Model->update($monImage, 1, "idImage"))
+        $monLogo["urlLogo"] = $this->upload->data('full_path');
+        if (!$this->logo_Model->update($monLogo, 1, "idLogo"))
         {
             return false;
         };
