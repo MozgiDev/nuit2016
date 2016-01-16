@@ -27,17 +27,17 @@ class MY_Model extends CI_Model {
 	}
 	
 	
-	public function delete($where)
+	public function delete($where, $champs = "id")
 	{
-		return (bool) $this->db->delete($this->table, ['id' => $where]);
+		return (bool) $this->db->delete($this->table, [$champs => $where]);
 	}
 
 
-	public function update($data = [], $where)
+	public function update($data = [], $where, $champs = 'id')
 	{
 
 			return (bool) $this->db->set($data)
-								   ->where(['id' => $where])
+								   ->where([$champs => $where])
 								   ->update($this->table);
 	}
 	
