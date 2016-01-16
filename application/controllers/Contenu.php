@@ -14,10 +14,6 @@ class Contenu extends CI_Controller
             return $this->contenuManager->find(1, 'idContenu');
     }
 
-    public function edit()
-    {
-        return $this->contenuManager->find(1, 'idContenu');
-    }
 
     public function update()
     {
