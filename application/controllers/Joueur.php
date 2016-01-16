@@ -108,11 +108,6 @@ class Joueur extends CI_Controller {
 	}
 
 
-	/*public function classement()
-	{
-		$data['tite'] = 'Classement des joueurs';
-		$data['joueurs'] = $this->joueurManager->all();
-	}*/
 
 private function generateRandomString($length = 5) {
 	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -131,10 +126,13 @@ private function generateRandomString($length = 5) {
 			$data['pseudo'] = $this->input->post('pseudo');
 			$data['mail'] = $this->input->post('mail');
 			$data['token'] = $this->generateRandomString(6);
-			if($this->joueurManager->store())
+		
+			if($this->joueurManager->save($data))
 			{
-				return $token;
+			
+				echo $data['token'];
 			}
+			
 		}
 		else
 		{
@@ -142,6 +140,11 @@ private function generateRandomString($length = 5) {
 		}
 	}
 
+	public function classement()
+	{
+		$data['tite'] = 'Classement des joueurs';
+		$data['joueurs'] = $this->joueurManager->all('idJoueur');
+		$this->template->load('layouts/template', 'mobile/joueur', $data);
+	}
 
-	
 }

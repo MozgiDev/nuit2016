@@ -50,6 +50,13 @@ and open the template in the editor.
                 $('.slider').slider({full_width: true});
             });
         </script>
+        <script type="text/javascript">
+            
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+            
+        </script>
         <!--Fin d'appelles des feuilles JS-->
     </body>
 </html>
