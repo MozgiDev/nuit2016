@@ -70,7 +70,7 @@
                         foreach ($photos as $rowP) {
                             if ($rowP->idAlbum == $row->idAlbum) {
                                 echo '<li>';
-                                echo '<img src = "' . IMG . $rowP->urlPhoto . '">';
+                                echo '<img class="materialboxed" src = "' . IMG . $rowP->urlPhoto . '">';
                                 echo '</li>';
                             }
                         }
@@ -96,8 +96,6 @@
 
 
 
-
-
     <!--Association-->
     <div class="row" id="association">
 
@@ -106,9 +104,11 @@
             <?php
             foreach ($association as $row) {
                 if ($row->afficherAssociation == 1) {
+                    echo '<a href="' . $row->urlSiteAssociation . '">';
                     echo '<div class="col s12 m3">';
-                    echo '<img class="materialboxed imgRonde" width="200" src="' . IMG . $row->urlPhotoAssociation . '">';
+                    echo '<img class="imgRonde" width="200" src="' . IMG . $row->urlPhotoAssociation . '">';
                     echo '</div>';
+                    echo '</a>';
                 }
             }
             ?>
@@ -204,10 +204,15 @@
             </div>
             <div class="row">
                 <div class="nav-wrapper">
-                    <div class="col s12 m4"></div>
                     <div class="col s12 m4">
-
-
+                      <nav style="box-shadow:none">
+                      <ul class="hide-on-med-and-down">
+                          <li><a href="#presentation">Présentation</a></li>
+                          <li><a href="#inscription">Inscription</a></li>
+                          <li><a href="#association">Association</a></li>
+                          <li><a href="#lots">Lots</a></li>
+                      </ul>
+                    </nav>
                     </div>
                     <div class="col s12 m4"></div>
                 </div>
@@ -215,7 +220,11 @@
         </div>
         <div class="container">© 2016 Nuit 2016 </a> </div>
     </div>
-
+<style>
+#materialbox-overlay{
+  background-color: transparent !important;
+}
+</style>
 
 </div>
 </footer>
