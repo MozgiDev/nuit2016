@@ -16,7 +16,6 @@ class Index extends CI_Controller {
 
         $data['association'] = $this->indexAssociation();
         $data['logo'] = $this->indexLogo();
-        var_dump($data);
         $this->template->load('layouts/template', 'web/onepage', $data);
     }
 
