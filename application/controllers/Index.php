@@ -16,11 +16,8 @@ class Index extends CI_Controller {
 
         $data['association'] = $this->indexAssociation();
         $data['logo'] = $this->indexLogo();
-<<<<<<< HEAD
-=======
         $data['image'] = $this->indexImage();
         
->>>>>>> 5610d69367d7d49cedef1e561ed3f11230f21470
         $this->template->load('layouts/template', 'web/onepage', $data);
     }
 
@@ -43,13 +40,13 @@ class Index extends CI_Controller {
     {
         return $this->association_Model->all("idAssociation");
     }
-    
+
     public function indexLogo(){
         return $this->logo_Model->all("idLogo");
     }
-    
+
     public function indexImage(){
         return $this->image_Model->all("idImage");
     }
-    
+
 }

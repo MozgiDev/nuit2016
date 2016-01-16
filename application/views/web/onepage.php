@@ -39,16 +39,17 @@
     <div class="row" id="presentation">
         <h1 class="center">Presentation</h1>
         <div class="row">
-            <div class="col s12 m12 l12 center">
+            <div class="col s12 m6 l6">
 
-                <p>
-                    <?php echo $contenu->TexteContenu;?>
-                </p>
-                
+
+
+
+
+                <p>Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem suiSed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem s.</p>
             </div>
-           
-            
-            
+            <div class="col s12 m6 l6">
+                <p>Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem suiSed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem s.</p>
+            </div>
         </div>
         <div class="row">
 
@@ -219,11 +220,6 @@
         </div>
         <div class="container">© 2016 Nuit 2016 </a> </div>
     </div>
-<style>
-#materialbox-overlay{
-  background-color: transparent !important;
-}
-</style>
 
 </div>
 </footer>
