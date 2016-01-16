@@ -25,4 +25,8 @@ class Admin extends CI_Controller
     public function indexAssociation() {
        $this->template->load('layouts/admin', 'association/index');
    }
+
+   public function indexJoueurs() {
+      $this->template->load('layouts/admin', 'joueurs/index');
+  }
 }
