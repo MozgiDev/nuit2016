@@ -39,17 +39,16 @@
     <div class="row" id="presentation">
         <h1 class="center">Presentation</h1>
         <div class="row">
-            <div class="col s12 m6 l6">
+            <div class="col s12 m12 l12 center">
 
-
-
-
-
-                <p>Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem suiSed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem s.</p>
+                <p>
+                    <?php echo $contenu->TexteContenu;?>
+                </p>
+                
             </div>
-            <div class="col s12 m6 l6">
-                <p>Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem suiSed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem s.</p>
-            </div>
+           
+            
+            
         </div>
         <div class="row">
 
@@ -70,7 +69,7 @@
                         foreach ($photos as $rowP) {
                             if ($rowP->idAlbum == $row->idAlbum) {
                                 echo '<li>';
-                                echo '<img src = "' . IMG . $rowP->urlPhoto . '">';
+                                echo '<img class="materialboxed" src = "' . IMG . $rowP->urlPhoto . '">';
                                 echo '</li>';
                             }
                         }
@@ -96,8 +95,6 @@
 
 
 
-
-
     <!--Association-->
     <div class="row" id="association">
 
@@ -106,9 +103,11 @@
             <?php
             foreach ($association as $row) {
                 if ($row->afficherAssociation == 1) {
+                    echo '<a href="' . $row->urlSiteAssociation . '">';
                     echo '<div class="col s12 m3">';
-                    echo '<img class="materialboxed imgRonde" width="200" src="' . IMG . $row->urlPhotoAssociation . '">';
+                    echo '<img class="imgRonde" width="200" src="' . IMG . $row->urlPhotoAssociation . '">';
                     echo '</div>';
+                    echo '</a>';
                 }
             }
             ?>
@@ -204,10 +203,15 @@
             </div>
             <div class="row">
                 <div class="nav-wrapper">
-                    <div class="col s12 m4"></div>
                     <div class="col s12 m4">
-
-
+                      <nav style="box-shadow:none">
+                      <ul class="hide-on-med-and-down">
+                          <li><a href="#presentation">Présentation</a></li>
+                          <li><a href="#inscription">Inscription</a></li>
+                          <li><a href="#association">Association</a></li>
+                          <li><a href="#lots">Lots</a></li>
+                      </ul>
+                    </nav>
                     </div>
                     <div class="col s12 m4"></div>
                 </div>
@@ -215,7 +219,11 @@
         </div>
         <div class="container">© 2016 Nuit 2016 </a> </div>
     </div>
-
+<style>
+#materialbox-overlay{
+  background-color: transparent !important;
+}
+</style>
 
 </div>
 </footer>

@@ -11,10 +11,12 @@ class Admin extends CI_Controller
     public function index()
     {
         $data['contenue'] = $this->indexContenue();
-        
-        var_dump($data);
-        
-        $this->template->load('layouts/admin', 'lots/index',$data);
+        $data['image'] = $this->showImage();
+        $data['photos'] = $this->indexPhoto();
+        $data['lots'] = $this->indexLot();
+        $data['albums'] = $this->indexAlbum();
+        $data['logo'] = $this->showLogo();
+        $this->template->load('layouts/admin', 'web/admin',$data);
     }
 
      public function indexContenue() {
@@ -22,12 +24,36 @@ class Admin extends CI_Controller
     }
 
     public function indexAssociation() {
-       $this->template->load('layouts/admin', 'association/index');
+        
+        
+        $data['association'] = $this->indexAssociationAll();
+        
+       $this->template->load('layouts/admin', 'association/index', $data);
    }
 
-   public function indexJoueurs() {
+   public function deleteAssociation(){
+       $id = $this->uri->segment(3);
+       var_dump($id);
+       //$this->association_Model->delete($id,'idAssociation');
+       $this->indexAssociation();
+   }
+
+
+   public function indexAssociationAll()
+    {
+        return $this->association_Model->all("idAssociation");
+    }
+    
+
+   public function indexJoueurs()
+   {
       $this->template->load('layouts/admin', 'joueurs/index');
-  }
+   }
+
+    public function indexLot()
+    {
+        return $this->lot_Model->all('idLot');
+    }
 
   public function indexAteliers() {
      $this->template->load('layouts/admin', 'ateliers/index');
@@ -35,7 +61,7 @@ class Admin extends CI_Controller
     //IMAGE
     public function showImage()
     {
-        return $this->image_Model->find(1);
+        return $this->image_Model->find(1, 'idImage');
     }
 
     public function updateImage()
@@ -48,42 +74,55 @@ class Admin extends CI_Controller
         //on charge la librairie ensuite
         $this->load->library('upload');
         $this->upload->initialize($config);
-        if (!$this->upload->do_upload("uneImage")) {
+        
+        
+        if (!$this->upload->do_upload("monImage")) {
             $error = array('error' => $this->upload->display_errors());
             return false;
         }
+        var_dump($this->upload->data);
 
         //stockage dans la BD
-        $monImage["urlImage"] = $this->upload->data('full_path');
+        $monImage["urlIMAGE"] = $this->upload->data('full_path');
         if (!$this->image_Model->update($monImage, 1, "idImage"))
         {
             return false;
         };
         return true;
     }
+    public function activateImage($id)
+    {
+        $maPhoto = $this->image_Model->find($id, 'idImage');
+        if ($maPhoto['afficherImage']==0)
+        {
+            $maPhoto['afficherImage']=1;
+        }
+        else{
+            $maPhoto['afficherImage']=0;
+        }
+        $this->image_Model->update($maPhoto, $id, 'idPhoto');
+        $this->index();
+
+    }
 
     //CONTENU
-    public function showContenu()
-    {
-        return $this->contenuManager->find(1, 'idContenu');
-    }
 
 
     public function updateContenu()
     {
-        $monContenu["TitreContenu"] = $this->input->post('TitreContenu');
-        $monContenu["TexteContenu"] = $this->input->post('TexteContenu');
-        if ($this->contenu_Model->update($monContenu,1))
-        {
-            return TRUE;
+        if (!empty($this->input->post('TitreContenu'))) {
+            $monContenu["TitreContenu"] = $this->input->post('TitreContenu');
+
+            $monContenu["TexteContenu"] = $this->input->post('editor1');
+            $this->contenu_Model->update($monContenu, 1, 'idContenu');
         }
-        return FALSE;
+        $this->index();
     }
 
     //PHOTOS
     public function indexPhoto()
     {
-        return $this->photo_Model->all();
+        return $this->photo_Model->all('idPhoto');
     }
 
 
@@ -99,17 +138,15 @@ class Admin extends CI_Controller
         $this->upload->initialize($config);
         if (!$this->upload->do_upload("unePhoto")) {
             $error = array('error' => $this->upload->display_errors());
-            return false;
+            $this->index();
         }
 
         //stockage dans la BD
         $maphoto["libellePhoto"] = $this->upload->data('file_name');
         $maphoto["urlPhoto"] = $this->upload->data('full_path');
-        if (!$this->photo_Model->save($maphoto))
-        {
-            return false;
-        };
-        return true;
+        $this->photo_Model->save($maphoto);
+        $this->index();
+
     }
 
     public function deletePhoto($id)
@@ -120,11 +157,9 @@ class Admin extends CI_Controller
             return false;
         }
         //suppression de la ligne dans la BD
-        if (!$this->photo_Model->delete($maPhoto->id)) {
-            return false;
+        $this->photo_Model->delete($maPhoto->id) ;
+        $this->index();
         }
-        return true;
-    }
 
     public function activatePhoto($id)
     {
@@ -145,6 +180,11 @@ class Admin extends CI_Controller
     }
 
     //LOGO
+
+    public function showLogo()
+    {
+        return $this->logo_Model->find(1, 'idLogo');
+    }
     public function updateLogo()
     {
         //configuration de la librairie d'upload
@@ -170,4 +210,44 @@ class Admin extends CI_Controller
         };
         return true;
     }
+
+    //LOT
+    public function storeLot()
+    {
+        $monLot["urlLot"] =$this->input->post('urlLot');
+        $monLot["positionLot"]= $this->input->post('positionLot');
+        if ($this->lotManager->save($monLot))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public function updateLot($id)
+    {
+        $monLot = $this->lotManager->find($id, 'idLot');
+        $monLot["urlLot"] =$this->input->post('urlLot');
+        $monLot["positionLot"]= $this->input->post('positionLot');
+        if ($this->lotManager->update($monLot, $id, 'idLot'))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public function deleteLot($id)
+    {
+        if ($this->lotManager->delete($id,'idLot'))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    //ALBUM
+    public function indexAlbum() {
+        return $this->album_Model->all("idAlbum");
+    }
+
+
 }
