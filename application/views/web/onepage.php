@@ -39,17 +39,16 @@
     <div class="row" id="presentation">
         <h1 class="center">Presentation</h1>
         <div class="row">
-            <div class="col s12 m6 l6">
+            <div class="col s12 m12 l12 center">
 
-
-
-
-
-                <p>Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem suiSed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem s.</p>
+                <p>
+                    <?php echo $contenu->TexteContenu;?>
+                </p>
+                
             </div>
-            <div class="col s12 m6 l6">
-                <p>Sed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem sed siquid auribus eius huius modi quivis infudisset ignotus, acerbum et inplacabilem et in hoc causarum titulo dissimilem suiSed cautela nimia in peiores haeserat plagas, ut narrabimus postea, aemulis consarcinantibus insidias graves apud Constantium, cetera medium principem s.</p>
-            </div>
+           
+            
+            
         </div>
         <div class="row">
 

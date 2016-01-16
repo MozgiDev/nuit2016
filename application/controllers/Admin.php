@@ -22,9 +22,26 @@ class Admin extends CI_Controller
     }
 
     public function indexAssociation() {
-       $this->template->load('layouts/admin', 'association/index');
+        
+        
+        $data['association'] = $this->indexAssociationAll();
+        
+       $this->template->load('layouts/admin', 'association/index', $data);
    }
 
+   public function deleteAssociation(){
+       $id = $this->uri->segment(3);
+       var_dump($id);
+       //$this->association_Model->delete($id,'idAssociation');
+       $this->indexAssociation();
+   }
+
+
+   public function indexAssociationAll()
+    {
+        return $this->association_Model->all("idAssociation");
+    }
+    
    public function indexJoueurs() {
       $this->template->load('layouts/admin', 'joueurs/index');
   }

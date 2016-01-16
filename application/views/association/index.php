@@ -19,7 +19,29 @@
     </thead>
 
     <tbody>
-      <tr>
+        
+        <?php
+        
+        foreach ($association as $row){
+            echo '<tr>';
+                echo '<td>'.$row->libelleAssociation.'</td>';
+
+                echo '<td>';
+                    echo $row->urlPhotoAssociation;
+                echo '</td>';
+                echo '<td>';
+                    echo $row->urlSiteAssociation;
+                echo '</td>';
+                echo '<td>';
+                    echo $row->afficherAssociation;
+                echo '</td>';
+                echo '<td>';
+                    echo '<a href="'.URL."index.php/Admin/deleteAssociation/$row->idAssociation>delete</a>";
+                echo '</td>';
+            echo '</tr>';
+        }
+        
+        ?>
       </tr>
     </tbody>
   </table>
@@ -29,9 +51,7 @@
     Ajouter association
 </button>
 
-<button class="btn waves-effect waves-light" type="submit" name="action">
-    Valider
-</button>
+
 
 <button class="btn waves-effect waves-light" type="submit" name="action">
     Annuler
