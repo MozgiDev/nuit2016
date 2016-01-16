@@ -40,13 +40,13 @@ class Index extends CI_Controller {
     {
         return $this->association_Model->all("idAssociation");
     }
-    
+
     public function indexLogo(){
         return $this->logo_Model->all("idLogo");
     }
-    
+
     public function indexImage(){
         return $this->image_Model->all("idImage");
     }
-    
+
 }

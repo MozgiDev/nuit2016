@@ -21,36 +21,20 @@
     </thead>
 
     <tbody>
-      <tr>
-      </tr>
+       <?php
+        foreach($joueurs as $unJoueur)
+        {
+          echo '<tr>';
+          echo '<td>'.$unJoueur->pseudo.'</td>';
+          echo '<td>'.$unJoueur->mail.'</td>';
+          echo '<td>'.$unJoueur->table.'</td>';
+          echo '<td>'.$unJoueur->position.'</td>';
+          echo '</tr>';
+        }
+        ?>
     </tbody>
-  </table>
-
-</br>
-
-<div class="row">
-      <div class="col s8">
-        <button class="btn waves-effect waves-light" type="submit" name="action">
-          Valider
-        </button>
-
-        <button class="btn waves-effect waves-light" type="submit" name="action">
-          Annuler
-        </button>
-      </div>
-
-      <div class="col s4">
-        <button class="btn waves-effect waves-light" type="submit" name="action">
-          Générer étiquettes
-        </button>
-
-        <button class="btn waves-effect waves-light" type="submit" name="action">
-          Importer CSV
-        </button>
-
-        <button class="btn waves-effect waves-light" type="submit" name="action">
-          Exporter CSV
-        </button>
-      </div>
-
+    <button acti></button>
+    <a href='<?=site_url();?>/joueur/export'><button class='btn waves-effect waves-light' type="button">Exporter</button></a>
+ 
+</table>
 </div>
