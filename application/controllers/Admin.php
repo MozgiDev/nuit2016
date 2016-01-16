@@ -10,13 +10,22 @@ class Admin extends CI_Controller
     }
     public function index()
     {
-        
+
         $data['contenue'] = $this->indexContenue();
-        
-        
-        
-        $this->template->load('layouts/admin', 'web/admin',$data);
+        $this->template->load('layouts/admin', 'lots/index',$data);
     }
+
+     public function indexContenue() {
+        return $this->contenu_Model->find(1, 'idContenu');
+    }
+
+    public function indexAssociation() {
+       $this->template->load('layouts/admin', 'association/index');
+   }
+
+   public function indexJoueurs() {
+      $this->template->load('layouts/admin', 'joueurs/index');
+  }
 
     //IMAGE
     public function showImage()
