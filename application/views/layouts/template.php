@@ -12,6 +12,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="<?php echo (Materialize . 'css/materialize.min.css'); ?>">
         <link rel="stylesheet" href="<?php echo (Materialize . 'css/materialize.icons.css'); ?>">
         <link rel="stylesheet" href="<?php echo (CSS . 'css/style.css'); ?>">
+        <link rel="stylesheet" href="assets/slick.css">
     </head>
     <body>
         <!-- Le fichier Template a pour caractéristique d'être le point de passage
@@ -40,7 +41,18 @@ and open the template in the editor.
         <!--Appelles des feuilles JS-->
         <script src="<?php echo (Jquery); ?>"></script>
         <script src="<?php echo (Materialize . 'js/materialize.min.js'); ?>"></script>
+        <script type="text/javascript" src="assets/slick.min.js"></script>
         <script>
+
+            $('.slider-album').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                speed: 400,
+                autoplay: true,
+                autoplaySpeed: 5000
+            });
+
             $(document).ready(function () {
                 $('.slider').slider({full_width: true});
             });
