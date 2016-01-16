@@ -29,6 +29,9 @@ class Admin extends CI_Controller
       $this->template->load('layouts/admin', 'joueurs/index');
   }
 
+  public function indexAteliers() {
+     $this->template->load('layouts/admin', 'ateliers/index');
+  }
     //IMAGE
     public function showImage()
     {
