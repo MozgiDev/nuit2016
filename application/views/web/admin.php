@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col s6">
-        <input placeholder="Titre presentation" id="first_name" value="<?php echo $contenue[0]->TitreContenue;?>" type="text" class="validate">
+        <h3>Titre présentation</h3>
         <form>
             <textarea id="editor1" name="editor1"></textarea>
             </br>
@@ -76,16 +76,16 @@
         <h3>Album</h3>
         <table>
             <thead>
-                <tr>
-                    <th data-field="libelle">libelle</th>
-                    <th data-field="active">Active</th>
-                    <th data-field="#"></th>
-                </tr>
+            <tr>
+                <th data-field="libelle">libelle</th>
+                <th data-field="active">Active</th>
+                <th data-field="#"></th>
+            </tr>
             </thead>
 
             <tbody>
-                <tr>
-                </tr>
+            <tr>
+            </tr>
             </tbody>
         </table>
 
@@ -105,17 +105,17 @@
         <h3>Photo</h3>
         <table>
             <thead>
-                <tr>
-                    <th data-field="url">URL</th>
-                    <th data-field="album">Album</th>
-                    <th data-field="active">Active</th>
-                    <th data-field="#"></th>
-                </tr>
+            <tr>
+                <th data-field="url">URL</th>
+                <th data-field="album">Album</th>
+                <th data-field="active">Active</th>
+                <th data-field="#"></th>
+            </tr>
             </thead>
 
             <tbody>
-                <tr>
-                </tr>
+            <tr>
+            </tr>
             </tbody>
         </table>
         </br>
@@ -137,16 +137,16 @@
         <h3>Lots</h3>
         <table>
             <thead>
-                <tr>
-                    <th data-field="url">URL</th>
-                    <th data-field="position">position</th>
-                    <th data-field="#"></th>
-                </tr>
+            <tr>
+                <th data-field="url">URL</th>
+                <th data-field="position">position</th>
+                <th data-field="#"></th>
+            </tr>
             </thead>
 
             <tbody>
-                <tr>
-                </tr>
+            <tr>
+            </tr>
             </tbody>
         </table>
 
