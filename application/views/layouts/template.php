@@ -68,7 +68,7 @@ and open the template in the editor.
             $.ajax({
                 url: "http://localhost/nuit2016/index.php/joueur/inscription",
                 type: "POST",
-                data: 'pseudo=moi&mail=mlkj@mail.com',
+                data: 'pseudo='+pseudo+'&mail='+mail,
                 success: function (html) {
                     console.log(html);
                     $('#token').html(html);
