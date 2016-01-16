@@ -63,7 +63,7 @@
 
     <div class="col s6">
         <h3>Logo principal</h3>
-        <img src=<?php echo IMG . $logo->urlLogo?>"">
+        <img src="<?php echo IMG . $logo->urlLogo?>">
         <i>
         </i>
         <p>
