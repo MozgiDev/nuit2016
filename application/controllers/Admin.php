@@ -17,7 +17,6 @@ class Admin extends CI_Controller
         
         $this->template->load('layouts/admin', 'lots/index',$data);
     }
-<<<<<<< HEAD
 
     //IMAGE
     public function showImage()
@@ -157,15 +156,4 @@ class Admin extends CI_Controller
         };
         return true;
     }
-
-
-
-=======
-    
-     public function indexContenue() {
-        return $this->contenu_Model->find(1, 'idContenu');
-    }
-    
-    
->>>>>>> 41c372455c787a7c3675ebabd34eb7e047992126
 }

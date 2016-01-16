@@ -125,9 +125,6 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-<<<<<<< HEAD
-$autoload['model'] = array('lot_Model','photo_Model','contenu_Model', 'image_Model', 'logo_Model', 'joueur_Model', 'atelier_Model');
+$autoload['model'] = array('lot_Model','photo_Model','contenu_Model', 'image_Model', 'logo_Model', 'joueur_Model', 'atelier_Model','album_Model','association_Model');
 
-=======
-$autoload['model'] = array('lot_Model','photo_Model','contenu_Model','album_Model','association_Model');
->>>>>>> 41c372455c787a7c3675ebabd34eb7e047992126
+

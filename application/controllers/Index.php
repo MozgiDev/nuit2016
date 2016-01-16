@@ -13,13 +13,7 @@ class Index extends CI_Controller {
         $data['photos'] = $this->indexPhoto();
         $data['lots'] = $this->indexLot();
         $data['album'] = $this->indexAlbum();
-<<<<<<< HEAD
-        var_dump($data);
-=======
-        $data['association'] = $this->indexAssociation();
-        
-        
->>>>>>> 41c372455c787a7c3675ebabd34eb7e047992126
+
         $this->template->load('layouts/template', 'web/onepage', $data);
     }
 
