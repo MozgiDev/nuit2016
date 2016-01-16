@@ -68,39 +68,80 @@ class Joueur extends CI_Controller {
 
 	public function import()
 	{
-		$data['error'] = '';
-		$config['upload_path'] = './assets/uploads/csv/';
-        $config['allowed_types'] = 'csv';
-        $config['max_size'] = '1000';
+			$data['error'] = '';
+			$config['upload_path'] = './assets/uploads/csv/';
+	        $config['allowed_types'] = 'csv';
+	        $config['max_size'] = '1000';
 
-        $this->load->library('upload', $config);
-         // If upload failed, display error
-        if (!$this->upload->do_upload()) 
-        {
-       		 $data['error'] = $this->upload->display_errors();
-       		 var_dump($data['error']);
-        }
-        else 
-        {
-            $file_data = $this->upload->data();
-            $file_path =  './assets/uploads/csv/'.$file_data['file_name'];
-            var_dump());
- 		}
- 		if (array_map('str_getcsv', file($file_path))) 
- 		{	
-                $csv_array = $this->csvimport->get_array($file_path);
-                foreach ($csv_array as $row) {
-                    $insert_data = array(
-                        'firstname'=>$row['firstname'],
-                        'lastname'=>$row['lastname'],
-                        'phone'=>$row['phone'],
-                        'email'=>$row['email'],
-                    );
-                    $this->joueurManager->store($insert_data);
-        }
-        else
-        {
-        	echo 'Erreur lors de l\'ouverture du fichier csv';
-        }
+	        $this->load->library('upload', $config);
+	         // If upload failed, display error
+	        if (!$this->upload->do_upload()) 
+	        {
+	       		 $data['error'] = $this->upload->display_errors();
+	        }
+	        else 
+	        {
+	            $file_data = $this->upload->data();
+	            $file_path =  './assets/uploads/csv/'.$file_data['file_name'];
+	            var_dump();
+	 		}
+	 		if (array_map('str_getcsv', file($file_path))) 
+	 		{	
+	                $csv_array = $this->csvimport->get_array($file_path);
+	                foreach ($csv_array as $row) {
+	                    $insert_data = array(
+	                        'pseudo'=>$row['pseudo'],
+	                        'table'=>$row['table'],
+	                        'position'=>$row['position'],
+	                        'jeton'=>$row['jeton'],
+	                    );
+	           $this->joueurManager->store($insert_data);
+	        }
+		}
 	}
+	public function etiquette()
+	{
+		$data['title'] = 'Les etiquettes';
+
+		$this->joueurManager->all();
+		
+	}
+
+
+	/*public function classement()
+	{
+		$data['tite'] = 'Classement des joueurs';
+		$data['joueurs'] = $this->joueurManager->all();
+	}*/
+
+private function generateRandomString($length = 5) {
+	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	    $randomString = '';
+	    for ($i = 0; $i < $length; $i++) {
+	        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+	    }
+	    return $randomString;
+	}
+
+	public function inscription()
+	{
+		if(!$this->ion_auth->logged_in())
+		{
+
+			$data['pseudo'] = $this->input->post('pseudo');
+			$data['mail'] = $this->input->post('mail');
+			$data['token'] = $this->generateRandomString(6);
+			if($this->joueurManager->store())
+			{
+				return $token;
+			}
+		}
+		else
+		{
+			redirect('/', 'refresh');
+		}
+	}
+
+
+	
 }
