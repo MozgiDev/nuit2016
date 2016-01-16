@@ -36,9 +36,6 @@
         ?>
     </tbody>
     <a href='<?=site_url();?>/joueur/export'><button class='btn waves-effect waves-light' type="button">Exporter</button></a>
-    <form action='<?= site_url()?>/joueur/import'  enctype="multipart/form-data">
-        <input type="file" name="file" id="file">
-        <input type="submit" value="Upload Image" name="submit">
-    </form>
+
 </table>
 </div>

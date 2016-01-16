@@ -73,10 +73,10 @@ class Joueur extends CI_Controller {
 	       		 $data['error'] = $this->upload->display_errors();
 	        }
 	        else 
-	        {
+	        {	$file_name = $this->upload->do_upload('file');
 	            $file_data = $this->upload->data();
 	            $file_path =  './assets/uploads/csv/'.$file_data['file_name'];
-	            var_dump();
+	          
 	 		}
 	 		if (array_map('str_getcsv', file($file_path))) 
 	 		{	
