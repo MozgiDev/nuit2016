@@ -36,7 +36,6 @@ and open the template in the editor.
         <script src="<?php echo (Materialize . 'js/materialize.min.js'); ?>"></script>
         <script type="text/javascript" src="assets/slick.min.js"></script>
         <script>
-
             $('.slider-album').slick({
                 infinite: true,
                 slidesToShow: 3,
@@ -50,6 +49,24 @@ and open the template in the editor.
                 $('.slider').slider({full_width: true});
             });
         </script>
+            <script>
+        function inscription() {
+            pseudo = $('#pseudo').val();
+            mail = $('#email').val();
+
+            $('#modal_inscription').openModal();
+
+            $.ajax({
+                url: "http://localhost/nuit2016/index.php/joueur/inscription",
+                type: "POST",
+                data: 'pseudo=moi&mail=mlkj@mail.com',
+                success: function (html) {
+                    console.log(html);
+                    $('#token').html(html);
+                }
+            });
+        }
+    </script>
         <!--Fin d'appelles des feuilles JS-->
     </body>
 </html>
