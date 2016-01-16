@@ -8,8 +8,7 @@
 <div class="row">
     <div class="col s6">
 
-        <?= form_open('admin/updateContenu');?>
-        <?php
+        <?php echo  form_open('admin/updateContenu');
             form_label("Titre du contenu");
             echo "<h3>
  <input type=\"input\" name=\"TitreContenu\" placeholder= \".$contenue->TitreContenu\">
@@ -25,8 +24,9 @@
                 Annuler saisie
             </button>";
 
-            form_close();
+            
         ?>
+    </form>
     </div>
 
 </div>
@@ -48,6 +48,7 @@
         <input type="file" name="monImage" size="20" />
         <br /><br />
         <input type="submit" value="upload" />
+        
         </form>
 
         <button class="btn waves-effect waves-light" type="submit" name="action">

@@ -38,18 +38,15 @@ class Admin extends CI_Controller
        $this->indexAssociation();
    }
 
-<<<<<<< HEAD
 
    public function indexAssociationAll()
     {
         return $this->association_Model->all("idAssociation");
     }
     
-   public function indexJoueurs() {
-=======
+
    public function indexJoueurs()
    {
->>>>>>> 9ea930ec9630c098ad1df64620a1a2a7ef109a13
       $this->template->load('layouts/admin', 'joueurs/index');
    }
 
@@ -77,6 +74,8 @@ class Admin extends CI_Controller
         //on charge la librairie ensuite
         $this->load->library('upload');
         $this->upload->initialize($config);
+        
+        
         if (!$this->upload->do_upload("monImage")) {
             $error = array('error' => $this->upload->display_errors());
             return false;
