@@ -20,6 +20,22 @@ and open the template in the editor.
         des feuilles CSS, JS-->
 
         <!-- Barre de navigation -->
+        <nav>
+        	<div class="nav-wrapper">
+        		<a href="#" class="brand-logo center">Back Office</a>
+        	</div>
+        </nav>
+
+        <nav>
+        	<div class="nav-wrapper">
+        		<ul id="nav-mobile" class="hide-on-med-and-down">
+        			<li><a href="#">Gestions des contenus</a></li>
+        			<li><a href="#">Gestions des joueurs</a></li>
+        			<li><a href="#">Gestion des ateliers</a></li>
+        			<li><a href="#">Gestion des associations</a></li>
+        		</ul>
+        	</div>
+        </nav>
 
         <!-- Fin de barre de navigation -->
 
@@ -40,6 +56,7 @@ and open the template in the editor.
         <!--Appelles des feuilles JS-->
         <script src="<?php echo (Jquery); ?>"></script>
         <script src="<?php echo (Materialize . 'js/materialize.min.js'); ?>"></script>
+        <script type="text/javascript" src="assets/ckeditor.js"></script>
         <script>
             $(document).ready(function () {
                 $('.slider').slider({full_width: true});

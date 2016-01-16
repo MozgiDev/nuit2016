@@ -11,6 +11,6 @@ class Admin extends CI_Controller
     }
     public function index()
     {
-        $this->template->load('layouts/admin', 'lot/index.php');
+        $this->template->load('layouts/admin', 'lots/index');
     }
 }

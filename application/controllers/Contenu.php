@@ -30,5 +30,9 @@ class Contenu extends CI_Controller
         return FALSE;
     }
 
+    public function index()
+    {
+        return $this->template->load("layouts/admin", 'lots');
+    }
 
 }
