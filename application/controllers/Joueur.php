@@ -7,6 +7,7 @@ class Joueur extends CI_Controller {
 	{
 		parent:: __construct();
 		$this->load->model('joueur_model', 'joueurManager');
+		$this->load->dbutil();
 	}
 	public function ajouter()
 	{
@@ -34,8 +35,8 @@ class Joueur extends CI_Controller {
 	{
 		$data = [];
 		$data['title'] = 'Liste des joueurs';
-		$data['joueurs'] = $this->joueurManager->all();
-		$this->template->load('layouts/admin', 'joueur/ajouter', $data);
+		$data['joueurs'] = $this->joueurManager->all('idJoueur');
+		//$this->template->load('layouts/admin', 'joueur/ajouter', $data);
 	}
 
 	//public
@@ -44,7 +45,7 @@ class Joueur extends CI_Controller {
 		$data = [];
 		$data['title'] = 'Liste des joueurs';
 		$data['joueurs'] = $this->joueurManager->all();
-		$this->template->load('layouts/admin', 'atelier/ajouter', $data);
+		$this->template->load('layouts/admin', 'joueur/ajouter', $data);
 	}
 
 	public function supprimer($id)
@@ -53,5 +54,12 @@ class Joueur extends CI_Controller {
 		{
 			redirect('joueur/lister');
 		}
+	}
+
+	public function export()
+	{
+		$query = $this->db->query("SELECT pseudo FROM joueur");
+
+		echo $this->dbutil->csv_from_result($query);
 	}
 }
