@@ -68,9 +68,12 @@
                                             // on boucle sur les images liée a l'album
 
                                             foreach ($photos as $rowP){
-                                                echo '<li>';
-                                                    echo '<img src = "'.IMG + $rowP->urlPhoto .'">';
-                                                echo '</li>';
+                                                if($rowP->idAlbum == $row->idAlbum){
+                                                    echo '<li>';
+                                                        echo '<img src = "'. IMG . $rowP->urlPhoto .'">';
+                                                    echo '</li>';
+                                                }
+                                               
                                             }
                                         echo '</ul>';
                                     echo '</div>';
@@ -89,66 +92,6 @@
 
 
 
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="<?php echo (IMG . "3.jpg"); ?>"> 
-                                    </li>
-                                    <li>
-                                        <img src="<<?php echo (IMG . "4.jpg"); ?>">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <p class="center">CONTENTS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="<?php echo (IMG . "5.jpg"); ?>">
-                                    </li>
-                                    <li>
-                                        <img src="<?php echo (IMG . "6.jpg"); ?>">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <p class="center">CONTENTS</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="<?php echo (IMG . "7.jpg"); ?>">
-                                    </li>
-                                    <li>
-                                        <img src="<?php echo (IMG . "8.jpg"); ?>"> 
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <p class="center">CONTENTS</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
             </div>
 
         </div>
@@ -163,21 +106,18 @@
 
         <h1 class="center">Association</h1>
         <div class="association">
-            <div class="col s12 m3">
-                <img class="materialboxed imgRonde" width="200" src="http://lorempixel.com/580/250/nature/4">
-            </div>
+            <?php 
+                foreach ($association as $row){
+                    if($row->afficherAssociation == 1){
+                        echo '<div class="col s12 m3">';
+                            echo '<img class="materialboxed imgRonde" width="200" src="'.IMG . $row->urlPhotoAssociation .'">';
+                        echo '</div>';
+                    }
+                    
+                }
+            ?>
+            
 
-            <div class="col s12 m3">
-                <img class="materialboxed imgRonde" width="200" src="http://lorempixel.com/580/250/nature/4">
-            </div>
-
-            <div class="col s12 m3">
-                <img class="materialboxed imgRonde" width="200" src="http://lorempixel.com/580/250/nature/4">
-            </div>
-
-            <div class="col s12 m3">
-                <img class="materialboxed imgRonde" width="200" src="http://lorempixel.com/580/250/nature/4">
-            </div>
 
         </div>
     </div>
@@ -186,8 +126,16 @@
     <div class="row" id="lots">
 
         <h1 class="center">Lots</h1>
+        
+        
+        <?php 
+        
+                    foreach ($lots as $row){
+                        
+                    }
+        
+        ?>
         <div class="col s12 m4">
-
             <div class="row">
                 <div class="col s12 m7">
                     <div class="card">
@@ -200,40 +148,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="col s12 m4">
-
-            <div class="row">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="<?php echo (IMG . "ps3.png"); ?>">
-                        </div>
-                        <div class="card-content">
-                            <p class="center">CONTENTS</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="col s12 m4">
-
-            <div class="row">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="<?php echo (IMG . "ps3.png"); ?>">
-                        </div>
-                        <div class="card-content">
-                            <p class="center">CONTENTS</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        
+        
     </div>
 
 

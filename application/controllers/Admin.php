@@ -7,10 +7,20 @@ class Admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->helper(array('form', 'url'));
     }
     public function index()
     {
-        $this->template->load('layouts/admin', 'lots/index');
+        
+        $data['contenue'] = $this->indexContenue();
+        
+        
+        
+        $this->template->load('layouts/admin', 'lots/index',$data);
     }
+    
+     public function indexContenue() {
+        return $this->contenu_Model->find(1, 'idContenu');
+    }
+    
+    
 }
