@@ -36,7 +36,8 @@
                     echo $row->afficherAssociation;
                 echo '</td>';
                 echo '<td>';
-                    echo '<a href="'.URL."index.php/Admin/deleteAssociation/$row->idAssociation>delete</a>";
+                   echo '<a href="'.URL.'index.php/Admin/deleteAssociation/'.$row->idAssociation.'">delete</a>';
+                       
                 echo '</td>';
             echo '</tr>';
         }
