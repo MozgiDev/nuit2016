@@ -56,7 +56,7 @@ class Photo extends CI_Controller {
 
     public function activate($id)
     {
-        $maPhoto = $this->photoManager->find($id);
+        $maPhoto = $this->photoManager->find($id, 'idPhoto');
         if ($maPhoto['afficherPhoto']==0)
         {
             $maPhoto['afficherPhoto']=1;
@@ -64,7 +64,7 @@ class Photo extends CI_Controller {
         else{
             $maPhoto['afficherPhoto']=0;
         }
-        if ($this->photoManager->update($maPhoto, $id))
+        if ($this->photoManager->update($maPhoto, $id, 'idPhoto'))
         {
             return TRUE;
         }
