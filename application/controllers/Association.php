@@ -17,7 +17,17 @@ class Association extends CI_Controller
 
     public function update($id)
     {
+        //récupération de la photo
 
+        $monAssociation['libelleAssociation'] = $this->input->post('libelleAssociation');
+        $monAssociation['urlPhotoAssociation']= //A GERER
+        $monAssociation['urlSiteAssociation']= $this->input->post('urlSiteAssociation');
+        $monAssociation['afficherAssociation']= FALSE;
+    }
+
+    public function activate($id)
+    {
+        
     }
 
 

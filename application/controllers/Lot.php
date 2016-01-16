@@ -39,7 +39,7 @@ class Lot extends CI_Controller {
 
     public function delete($id)
     {
-        if ($this->lotManager->delete($id))
+        if ($this->lotManager->delete($id,'idLot'))
         {
             return true;
         }
