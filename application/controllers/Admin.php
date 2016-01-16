@@ -10,7 +10,6 @@ class Admin extends CI_Controller
     }
     public function index()
     {
-
         $data['contenue'] = $this->indexContenue();
         $this->template->load('layouts/admin', 'lots/index',$data);
     }
@@ -27,6 +26,9 @@ class Admin extends CI_Controller
       $this->template->load('layouts/admin', 'joueurs/index');
   }
 
+  public function indexAteliers() {
+     $this->template->load('layouts/admin', 'ateliers/index');
+  }
     //IMAGE
     public function showImage()
     {
