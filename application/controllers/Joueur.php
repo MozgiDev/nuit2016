@@ -8,6 +8,7 @@ class Joueur extends CI_Controller {
 		parent:: __construct();
 		$this->load->model('joueur_model', 'joueurManager');
 		$this->load->dbutil();
+        $this->load->library('csvimport');
 	}
 	public function ajouter()
 	{
@@ -67,7 +68,39 @@ class Joueur extends CI_Controller {
 
 	public function import()
 	{
-		$this->load->library('csvimport');	
-		$this->csvimport->get_array('test.csv', ['pseudo']);
+		$data['error'] = '';
+		$config['upload_path'] = './assets/uploads/csv/';
+        $config['allowed_types'] = 'csv';
+        $config['max_size'] = '1000';
+
+        $this->load->library('upload', $config);
+         // If upload failed, display error
+        if (!$this->upload->do_upload()) 
+        {
+       		 $data['error'] = $this->upload->display_errors();
+       		 var_dump($data['error']);
+        }
+        else 
+        {
+            $file_data = $this->upload->data();
+            $file_path =  './assets/uploads/csv/'.$file_data['file_name'];
+            var_dump());
+ 		}
+ 		if (array_map('str_getcsv', file($file_path))) 
+ 		{	
+                $csv_array = $this->csvimport->get_array($file_path);
+                foreach ($csv_array as $row) {
+                    $insert_data = array(
+                        'firstname'=>$row['firstname'],
+                        'lastname'=>$row['lastname'],
+                        'phone'=>$row['phone'],
+                        'email'=>$row['email'],
+                    );
+                    $this->joueurManager->store($insert_data);
+        }
+        else
+        {
+        	echo 'Erreur lors de l\'ouverture du fichier csv';
+        }
 	}
 }
