@@ -19,13 +19,14 @@
 
       <tbody>
           <?php
-					var_dump($data['ateliers']);
         foreach($ateliers as $unAtelier)
         {
           echo '<tr>';
           echo '<td>'.$unAtelier->libelleAtelier.'</td>';
           echo '<td>'.$unAtelier->descriptionAtelier.'</td>';
           echo '<td>'.$unAtelier->afficherAtelier.'</td>';
+					echo '<td>'.$unAtelier->afficherAtelier.'</td>';
+					echo '<td><a class="btn-floating btn-large waves-effect waves-light red" href="supprimer/' .$unAtelier->idAtelier. '"><i class="material-icons">add</i></a></td>';
           echo '</tr>';
         }
         ?>
