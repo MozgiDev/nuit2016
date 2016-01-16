@@ -19,6 +19,7 @@
 
       <tbody>
           <?php
+					var_dump($data['ateliers']);
         foreach($ateliers as $unAtelier)
         {
           echo '<tr>';
@@ -61,13 +62,13 @@
       <div class="col s6">
              <table class='responsive-table'>
               <thead>
-              <th>Libelle</th>  
-              <th>Description</th>  
-              <th>action</th> 
+              <th>Libelle</th>
+              <th>Description</th>
+              <th>action</th>
               </thead>
 
               <tbody>
-            
+
               </tbody>
 </table>
 			</div>
