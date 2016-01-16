@@ -33,8 +33,8 @@ class Admin extends CI_Controller
 
    public function deleteAssociation(){
        $id = $this->uri->segment(3);
-       var_dump($id);
-       //$this->association_Model->delete($id,'idAssociation');
+       //var_dump($id);
+       $this->association_Model->delete($id,'idAssociation');
        $this->indexAssociation();
    }
 

@@ -13,13 +13,23 @@
           <th data-field="nom">Atelier</th>
           <th data-field="urlphoto">Libelle</th>
           <th data-field="urlweb">Description</th>
-          <th data-field="#">Action</th>
+          <th data-field="#">Actions</th>
         </tr>
       </thead>
 
       <tbody>
-        <tr>
-        </tr>
+          <?php
+        foreach($ateliers as $unAtelier)
+        {
+          echo '<tr>';
+          echo '<td>'.$unAtelier->libelleAtelier.'</td>';
+          echo '<td>'.$unAtelier->descriptionAtelier.'</td>';
+          echo '<td>'.$unAtelier->afficherAtelier.'</td>';
+					echo '<td>'.$unAtelier->afficherAtelier.'</td>';
+					echo '<td><a class="btn-floating btn-large waves-effect waves-light red" href="supprimer/' .$unAtelier->idAtelier. '"><i class="material-icons">add</i></a></td>';
+          echo '</tr>';
+        }
+        ?>
       </tbody>
     </table>
 
@@ -51,20 +61,17 @@
 
 <div class="row">
       <div class="col s6">
-        <table>
-          <thead>
-            <tr>
-              <th data-field="joueurs">Joueurs</th>
-              <th data-field="score">Score/Temps</th>
-              <th data-field="#">Action</th>
-            </tr>
-          </thead>
+             <table class='responsive-table'>
+              <thead>
+              <th>Libelle</th>
+              <th>Description</th>
+              <th>action</th>
+              </thead>
 
-          <tbody>
-            <tr>
-            </tr>
-          </tbody>
-        </table>
+              <tbody>
+
+              </tbody>
+</table>
 			</div>
 </div>
 
