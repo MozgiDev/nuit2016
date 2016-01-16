@@ -29,9 +29,9 @@ and open the template in the editor.
         <nav>
         	<div class="nav-wrapper">
         		<ul id="nav-mobile" class="hide-on-med-and-down">
-        			<li><a href="#">Gestions des contenus</a></li>
-        			<li><a href="#">Gestions des joueurs</a></li>
-        			<li><a href="#">Gestion des ateliers</a></li>
+        			<li><a href="/nuit2016/index.php/admin/">Gestions des contenus</a></li>
+        			<li><a href="/nuit2016/index.php/joueur/lister">Gestions des joueurs</a></li>
+        			<li><a href="/nuit2016/index.php/atelier/lister">Gestion des ateliers</a></li>
         			<li><a href="#">Gestion des associations</a></li>
         		</ul>
         	</div>
@@ -60,7 +60,7 @@ and open the template in the editor.
         <script>
             $(document).ready(function () {
                 $('.slider').slider({full_width: true});
-                
+
                 CKEDITOR.replace( 'editor1' );
 
             });
