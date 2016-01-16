@@ -129,26 +129,27 @@
         
         
         <?php 
-        
+            $i = 0;
                     foreach ($lots as $row){
-                        
+                        $i = $i + 1;
+                        echo '<div class="col s12 m4">';
+                            echo '<div class="row">';
+                                echo '<div class="col s12 m7">';
+                                    echo '<div class="card">';
+                                        echo '<div class="card-image">';
+                                            echo '<img src="'.$row->urlLot.'">';
+                                        echo '</div>';
+                                        echo '<div class="card-content">';
+                                            echo '<p class="center">'. $i .'er n-'. $i .'</p>';
+                                        echo '</div>';
+                                    echo '</div>';
+                                echo '</div>';
+                            echo '</div>';
+                        echo '</div>';
                     }
         
         ?>
-        <div class="col s12 m4">
-            <div class="row">
-                <div class="col s12 m7">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="<?php echo (IMG . "ps3.png"); ?>">
-                        </div>
-                        <div class="card-content">
-                            <p class="center">CONTENTS</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         
         
     </div>

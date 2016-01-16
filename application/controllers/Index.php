@@ -14,7 +14,7 @@ class Index extends CI_Controller {
         $data['lots'] = $this->indexLot();
         $data['album'] = $this->indexAlbum();
         $data['association'] = $this->indexAssociation();
-        
+        $data['logo'] = $this->indexLogo();
         
         $this->template->load('layouts/template', 'web/onepage', $data);
     }
@@ -38,4 +38,9 @@ class Index extends CI_Controller {
     {
         return $this->association_Model->all("idAssociation");
     }
+    
+    public function indexLogo(){
+        
+    }
+    
 }
