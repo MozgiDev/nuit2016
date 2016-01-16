@@ -78,7 +78,7 @@ class Admin extends CI_Controller
         
         if (!$this->upload->do_upload("monImage")) {
             $error = array('error' => $this->upload->display_errors());
-            return false;
+            $this->index();
         }
         var_dump($this->upload->data);
 
@@ -88,7 +88,7 @@ class Admin extends CI_Controller
         {
             return false;
         };
-        return true;
+        $this->index();
     }
     public function activateImage($id)
     {
@@ -151,19 +151,19 @@ class Admin extends CI_Controller
 
     public function deletePhoto($id)
     {
-        $maPhoto = $this->photo_Model->find($id);
-        if (!unlink($maPhoto->urlPhoto))
+        $maPhoto = $this->photo_Model->find($id, 'idPhoto');
+        if (file_exists($maPhoto->urlPhoto))
         {
-            return false;
+            unlink($maPhoto->urlPhoto);
         }
         //suppression de la ligne dans la BD
-        $this->photo_Model->delete($maPhoto->id) ;
+        $this->photo_Model->delete('idPhoto',$id) ;
         $this->index();
         }
 
     public function activatePhoto($id)
     {
-        $maPhoto = $this->photo_Model->find($id, 'idPhoto');
+       /*$maPhoto = $this->photo_Model->find($id, 'idPhoto');
         if ($maPhoto['afficherPhoto']==0)
         {
             $maPhoto['afficherPhoto']=1;
@@ -173,8 +173,8 @@ class Admin extends CI_Controller
         }
         if ($this->photo_Model->update($maPhoto, $id, 'idPhoto'))
         {
-            return TRUE;
-        }
+            $this->index();
+        }*/
         return FALSE;
 
     }

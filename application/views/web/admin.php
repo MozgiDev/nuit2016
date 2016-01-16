@@ -137,16 +137,32 @@
             </thead>
 
             <tbody>
-            <tr>
+            <?php foreach($photos as $photo)
+{ echo"
+    <tr>
+                <th >$photo->urlPhoto</th>
+                <th >$photo->idAlbum</th>
+                <th >$photo->afficherPhoto</th>
+                <th><a href= ".site_url("admin/deletePhoto/$photo->idPhoto")."> supprimer Photo</a></th>
+    </tr>";
+}?>
 
-            </tr>
-            <tr>
-
-            </tr>
             </tbody>
         </table>
         </br>
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
         <button class="btn waves-effect waves-light" type="submit" name="action">
             Valider action
         </button>
