@@ -68,7 +68,7 @@ class Joueur extends CI_Controller {
 
 	        $this->load->library('upload', $config);
 	         // If upload failed, display error
-	        if (!$this->upload->do_upload()) 
+	        if (!$this->upload->do_upload('file')) 
 	        {
 	       		 $data['error'] = $this->upload->display_errors();
 	        }

@@ -14,9 +14,9 @@
         <th data-field="urlphoto">Adresse mail</th>
         <th data-field="urlweb">Numéro table</th>
         <th data-field="afficher">Position</th>
+        <th data-field="#">Action</th>
         <th data-field="#">Valider Préinscription</th>
         <th data-field="#">Valider Inscription</th>
-        <th data-field="#">Action</th>
       </tr>
     </thead>
 
@@ -29,12 +29,16 @@
           echo '<td>'.$unJoueur->mail.'</td>';
           echo '<td>'.$unJoueur->table.'</td>';
           echo '<td>'.$unJoueur->position.'</td>';
+         echo  '<td><a href='.site_url().'/joueur/supprimer/'.$unJoueur->idJoueur.'><button class="btn waves-effect waves-light" type="button">Supprimer</button></a></td>';
           echo '</tr>';
+
         }
         ?>
     </tbody>
-    <button acti></button>
     <a href='<?=site_url();?>/joueur/export'><button class='btn waves-effect waves-light' type="button">Exporter</button></a>
- 
+    <form action='<?= site_url()?>/joueur/import'  enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
 </table>
 </div>
